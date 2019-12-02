@@ -71,13 +71,13 @@ header {
 .header-top-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+    justify-items: center;
     padding: 1rem 15rem;
     align-items: center;
 }
 
 .header-left__img {
-    width: 55em;
+    width: 52em;
 }
 
 .header-right__heading,
@@ -171,7 +171,7 @@ main {
 .main-section-bottom__container {
     width: 100vw;
     background-color: var(--grey-light);
-    padding: 6rem 17rem;
+    padding: 6rem 15rem;
 }
 
 .main-section-top__wrapper {
@@ -179,7 +179,8 @@ main {
     grid-template-columns: repeat(4, 1fr);
     margin-top: 4rem;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+    grid-gap: 3rem;
 }
 
 .main-section-top__card {
@@ -287,9 +288,9 @@ main {
     background-color: var(--grey-light);
     border-bottom: 10px solid transparent;
     border-image: url(/assets/imgs/Border-BG.jpg) 30 round;
-    display: flex;
+    display: grid;
     position: relative;
-    align-items: flex-end;
+    align-items: end;
     justify-content: center;
     padding: .4rem;
 }
@@ -313,7 +314,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 2rem;
-    justify-content: center;
+    justify-items: center;
     
 
 
@@ -324,7 +325,7 @@ main {
     position: relative;
     margin: 2rem;
     box-shadow: 0 0 3rem rgb(66, 61, 61);
-    width: 41em;
+    width: 40em;
 
 
 }
@@ -374,7 +375,9 @@ main {
 
 .main-section-bottom__wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 65% 35%;
+    grid-gap: 2rem;
+    justify-items: center;
 }
 
 .main-section-bottom__header {
@@ -385,22 +388,17 @@ main {
     font-size: var(--font-size-big);
 }
 
-.small-bubbles__container {
+.small-bubbles__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
     margin-top: 2rem;
 }
- .main-section-bottom__small-bubbles__wrapper {
-    display: flex;
-    flex-direction: column;
-} 
+
 
 .small-bubble   {
-    display: flex;
-    flex-direction: column;
     background-color: white;
-    justify-content: flex-start;
     line-height: 1.4;
     position: relative;
     margin: 2.5rem 1rem;
@@ -437,8 +435,8 @@ main {
 }
 
 .tabs-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
     position: relative;
 }
@@ -516,6 +514,11 @@ main {
     margin-top: 12rem;
 }
 
+.bottom-banner__right {
+    display: grid;
+    justify-items: end;
+}
+
 /* FOOTER */
 
 footer {
@@ -527,7 +530,7 @@ footer {
 .footer-top {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 8rem 17rem 0rem 17rem;
+    padding: 8rem 16rem 0rem 16rem;
     grid-gap: 0;
 
 }
@@ -555,19 +558,20 @@ footer {
 .item-paragraph-lorem::after {
     border-bottom: 1px solid var(--grey-light);
     margin-top: 1rem;
+    content: "";
+    width: 13em;
+    display: block;
+    opacity: .5;
 }
 
 .flickr__item-box__wrapper {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     margin-top: 1rem;
 
 }
 
-.box-wrapper-1,
-.box-wrapper-2 {
-    display: flex;
-}
 
 .box {
     height: 7rem;
@@ -577,22 +581,20 @@ footer {
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
     align-items: center;
-    padding: 3rem 23rem;
+    padding: 3rem 18rem;
     background-color: var(--primary-grey-darker);
 
 }
 
+.footer-bottom__left {
+    justify-self: start;
+}
 .footer-bottom__left p {
     color: #8d8d8d;
-}
-
-.footer-bottom__right {
-    display: flex;
-    justify-content: flex-end;
-    
 }
 
 .footer-bottom__right i {
@@ -685,7 +687,7 @@ footer {
     }
     .main-section-top__wrapper,
     .blog-cards__wrapper,
-    .small-bubbles__container,
+    .small-bubbles__wrapper,
     .footer-top,
     .footer-bottom {
         grid-template-columns: 1fr;
