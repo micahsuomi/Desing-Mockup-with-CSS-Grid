@@ -526,11 +526,13 @@ main {
 }
 
 
-.design-content__header {
+.design-content__header,
+.production-content__header {
     font-size: var(--font-size-small);
 }
 
-.design-content__paragraph {
+.design-content__paragraph,
+.production-content__paragraph {
     font-size: var(--font-size-small);
     margin-top: 1rem;
 
