@@ -195,7 +195,7 @@ main {
 
 .services__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(32em, 1fr));
     margin-top: 4rem;
     align-items: center;
     justify-items: center;
@@ -690,6 +690,10 @@ footer {
     .blog__container,
     .testimonials-development__container {
         padding: 2rem 1rem;
+    }
+
+    .services__wrapper {
+        grid-column-gap: 1rem;
     }
 
 
